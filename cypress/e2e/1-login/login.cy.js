@@ -8,13 +8,13 @@ describe("User login test case", () => {
   it("Success Login", () => {
     cy.get('[data-test="username"]').should("be.visible").type("standard_user");
     cy.get('[data-test="password"]').should("be.visible").type("secret_sauce");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[class="title"]').contains("Products");
   });
 
   it("Login without username", () => {
     cy.get('[data-test="password"]').should("be.visible").type("secret_sauce");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[data-test="error"]')
       .should("be.visible")
       .contains("Username is required");
@@ -22,7 +22,7 @@ describe("User login test case", () => {
 
   it("Login without password", () => {
     cy.get('[data-test="username"]').should("be.visible").type("standard_user");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[data-test="error"]')
       .should("be.visible")
       .contains("Password is required");
@@ -33,7 +33,7 @@ describe("User login test case", () => {
       .should("be.visible")
       .type("wrong_username");
     cy.get('[data-test="username"]').should("be.visible").type("standard_user");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[data-test="error"]').should("be.visible").contains("do not match");
   });
 
@@ -42,7 +42,7 @@ describe("User login test case", () => {
     cy.get('[data-test="username"]')
       .should("be.visible")
       .type("wrong_password");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[data-test="error"]').should("be.visible").contains("do not match");
   });
 
@@ -51,7 +51,7 @@ describe("User login test case", () => {
       .should("be.visible")
       .type("locked_out_user");
     cy.get('[data-test="password"]').should("be.visible").type("secret_sauce");
-    cy.get('[data-test="login-button" ]').click();
+    cy.get('[data-test="login-button"]').click();
     cy.get('[data-test="error"]').should("be.visible").contains("locked out");
   });
 });
