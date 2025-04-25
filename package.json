@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "login": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login.cy.js'",
+    "login-pom": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login-pom.cy.js'"
   },
   "author": "Herdian Chandra",
   "license": "ISC",
