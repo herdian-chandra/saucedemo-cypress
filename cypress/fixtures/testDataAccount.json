@@ -1,0 +1,17 @@
+[
+  {
+    "username": "wrong_username",
+    "password": "secret_user",
+    "errorMessage": "do not match"
+  },
+  {
+    "username": "standar_user",
+    "password": "wrong_password",
+    "errorMessage": "do not match"
+  },
+  {
+    "username": "locked_out_user",
+    "password": "secret_user",
+    "errorMessage": "locked out"
+  }
+]
