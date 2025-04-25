@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "login": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login.cy.js'",
-    "login-pom": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login-pom.cy.js'"
+    "login-pom": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login-pom.cy.js'",
+    "login-pom-data": "npx cypress run --browser chrome --spec 'cypress/e2e/1-login/login-pom-data.cy.js'"
   },
   "author": "Herdian Chandra",
   "license": "ISC",
