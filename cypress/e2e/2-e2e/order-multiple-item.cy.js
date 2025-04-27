@@ -6,6 +6,14 @@ import checkoutStepTwo from "../../support/page-object/checkout-step-two";
 import checkoutComplete from "../../support/page-object/checkout-complete";
 
 const listOfProducts = require("../../fixtures/testDataProducts.json");
+//alterntive way to call fixture
+/**
+ * cy.fixture('name_of_file_fixture').then(function(data){
+ *  this.data = data
+ * })
+ *
+ * and store it in beforeEach
+ */
 
 describe("E2E Journey Order", () => {
   beforeEach(() => {

@@ -12,7 +12,6 @@ describe("POM user login test case", () => {
     loginPage.inputUsername("standard_user");
     loginPage.inputPassword("secret_sauce");
     loginPage.clickLoginButton();
-    // loginPage.verifyTitlePage("Products");
     inventory.verifyTitlePage("Products");
   });
 
