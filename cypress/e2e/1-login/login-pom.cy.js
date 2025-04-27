@@ -1,3 +1,4 @@
+import inventory from "../../support/page-object/inventory";
 import loginPage from "../../support/page-object/loginPage";
 
 describe("POM user login test case", () => {
@@ -11,6 +12,7 @@ describe("POM user login test case", () => {
     loginPage.inputUsername("standard_user");
     loginPage.inputPassword("secret_sauce");
     loginPage.clickLoginButton();
+    inventory.verifyTitlePage("Products");
   });
 
   it("Login without username", () => {
