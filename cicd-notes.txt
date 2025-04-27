@@ -1,0 +1,5 @@
+sample command:
+npx cypress run --spec spec_loation_in_folder/directory --env url="the_url"
+
+run with browser:
+npx cypress run --headed --browser chrome --spec spec_loation_in_folder/directory --env url="the_url"

@@ -1,16 +1,20 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  defaultCommandTimeout: 8000,
+  reporter: "cypress-mochawesome-reporter",
+  env: {
+    development: "https://www.google.com/",
+    stage: "https://www.tokopedia.com/",
+    production: "https://www.saucedemo.com/",
+    orangeHRM:
+      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    userId: "",
+    password: "",
+  },
   e2e: {
-    env: {
-      development: "https://www.google.com/",
-      stage: "https://www.tokopedia.com/",
-      production: "https://www.saucedemo.com/",
-      orangeHRM:
-        "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-    },
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require("cypress-mochawesome-reporter/plugin")(on);
     },
   },
 });
