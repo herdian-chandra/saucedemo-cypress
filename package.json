@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test-all": "npx cypress run --browser chrome --spec \"cypress/e2e/\"",
-    "login": "npx cypress run --browser chrome --spec \"cypress/e2e/1-login/login.cy.js\"",
+    "login": "npx cypress run --browser chrome --spec cypress/e2e/1-login/login.cy.js",
     "login-pom": "npx cypress run --browser chrome --spec \"cypress/e2e/1-login/login-pom.cy.js\"",
     "login-pom-data": "npx cypress run --browser chrome --spec \"cypress/e2e/1-login/login-pom-data.cy.js\"",
     "e2e": "npx cypress run --browser chrome --spec \"cypress/e2e/2-e2e/order-single-item.cy.js\"",
