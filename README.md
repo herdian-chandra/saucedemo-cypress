@@ -32,6 +32,10 @@ Alternatively, you can refer to the `package.json` file to find and run specific
 | e2e-multiple | npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-multiple-item.cy.js |
 | headed-test | npx cypress run --headed --browser chrome |
 
+## Reports
+
+![alt text](img/reports.png)
+
 ## Run in Jenkins
 
 - This is a simple configuration job in jenkins
