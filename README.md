@@ -34,9 +34,9 @@ Alternatively, you can refer to the `package.json` file to find and run specific
 
 ## Run in Jenkins
 
-This is a simple configuration job in jenkins
-![alt text](image.png)
-Build with parameters
-![alt text](image-1.png)
-Result
-![alt text](image-2.png)
+- This is a simple configuration job in jenkins
+  ![alt text](image.png)
+- Build with parameters
+  ![alt text](image-1.png)
+- Result
+  ![alt text](image-2.png)
