@@ -1,17 +1,31 @@
-[
-  {
-    "username": "wrong_username",
-    "password": "secret_user",
-    "errorMessage": "do not match"
+{
+  "validUser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
   },
-  {
-    "username": "standar_user",
-    "password": "wrong_password",
-    "errorMessage": "do not match"
-  },
-  {
+  "lockedOutUser": {
     "username": "locked_out_user",
-    "password": "secret_user",
-    "errorMessage": "locked out"
+    "password": "secret_sauce",
+    "errorMsg": "Sorry, this user has been locked out"
+  },
+  "invalidUsername": {
+    "username": "wrong_user",
+    "password": "secret_sauce",
+    "errorMsg": "Username and password do not match any user in this service"
+  },
+  "invalidPassword": {
+    "username": "standard_user",
+    "password": "wrong_password",
+    "errorMsg": "Username and password do not match any user in this service"
+  },
+  "withoutUsername": {
+    "username": "",
+    "password": "secret_sauce",
+    "errorMsg": "Username is required"
+  },
+  "withoutPassword": {
+    "username": "standard_user",
+    "password": "",
+    "errorMsg": "Password is required"
   }
-]
+}

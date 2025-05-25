@@ -3,8 +3,6 @@ import loginPage from "../../support/page-object/loginPage";
 
 describe("POM user login test case", () => {
   beforeEach(() => {
-    //visit url first
-    // cy.visit("https://www.saucedemo.com/");
     cy.visit(Cypress.env("production"));
   });
 

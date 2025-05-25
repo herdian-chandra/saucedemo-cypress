@@ -11,7 +11,6 @@ const listOfProducts = require("../../fixtures/testDataProducts.json");
  * cy.fixture('name_of_file_fixture').then(function(data){
  *  this.data = data
  * })
- *
  * and store it in beforeEach
  */
 
@@ -26,9 +25,10 @@ describe("E2E Journey Order", () => {
     /**
      * login
      */
-    loginPage.inputUsername("standard_user");
-    loginPage.inputPassword("secret_sauce");
-    loginPage.clickLoginButton();
+    // loginPage.inputUsername("standard_user");
+    // loginPage.inputPassword("secret_sauce");
+    // loginPage.clickLoginButton();
+    loginPage.loginSuccess("standard_user", "secret_sauce");
 
     /**
      * inventory
