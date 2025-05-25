@@ -16,6 +16,12 @@ class loginPage {
   verifyErrorMessage(errorMessage) {
     cy.get(this.errorMessage).should("be.visible").contains(errorMessage);
   }
+
+  loginSuccess(username, password) {
+    this.inputUsername(username);
+    this.inputPassword(password);
+    this.clickLoginButton(this.loginButton);
+  }
 }
 
 export default new loginPage();
