@@ -33,12 +33,3 @@ jobs:
 
       - name: Run Cypress Test
         run: ./node_modules/.bin/cypress run
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Upload Cypress Reports
-        uses: actions/upload-artifact@v3.1.4
-        with:
-          name: mochawesome-report
-          path: cypress/reports/html
