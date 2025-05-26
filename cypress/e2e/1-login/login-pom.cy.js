@@ -1,7 +1,7 @@
 import inventory from "../../support/page-object/inventory";
 import loginPage from "../../support/page-object/loginPage";
 
-describe("POM user login test case", () => {
+describe("POM user login test case with hardcode data", () => {
   beforeEach(() => {
     cy.visit(Cypress.env("production"));
   });

@@ -3,7 +3,7 @@ import loginPage from "../../support/page-object/loginPage";
 
 const data = require("../../fixtures/testDataAccount.json");
 
-describe("POM user login test case", () => {
+describe("POM user login test case with test data", () => {
   beforeEach(() => {
     cy.visit(Cypress.env("production"));
   });

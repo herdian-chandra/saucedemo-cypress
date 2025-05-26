@@ -1,0 +1,35 @@
+name: Cypress Tests UI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Respository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Clean and Install Dependencies
+        run: rm -rf node_modules package-lock.json && npm install
+
+      - name: Fix Cypress Permissions
+        run: chmod +x node_modules/.bin/cypress
+
+      - name: Debug CI
+        run: ls -lah node_modules/.bin/
+
+      - name: Run Cypress Test
+        run: ./node_modules/.bin/cypress run

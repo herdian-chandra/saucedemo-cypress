@@ -14,14 +14,14 @@ const listOfProducts = require("../../fixtures/testDataProducts.json");
  * and store it in beforeEach
  */
 
-describe("E2E Journey Order", () => {
+describe("E2E Journey Order Multiple Item", () => {
   beforeEach(() => {
     //visit url first
     // cy.visit("https://www.saucedemo.com/");
     cy.visit(Cypress.env("production"));
   });
 
-  it("Journey order single item", () => {
+  it("Journey order multiple item", () => {
     /**
      * login
      */
