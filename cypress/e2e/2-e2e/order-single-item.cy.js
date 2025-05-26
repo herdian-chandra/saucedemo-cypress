@@ -5,7 +5,7 @@ import checkoutStepOne from "../../support/page-object/checkout-step-one";
 import checkoutStepTwo from "../../support/page-object/checkout-step-two";
 import checkoutComplete from "../../support/page-object/checkout-complete";
 
-describe("E2E Journey Order", () => {
+describe("E2E Journey Order Single Item", () => {
   beforeEach(() => {
     //visit url first
     // cy.visit("https://www.saucedemo.com/");
