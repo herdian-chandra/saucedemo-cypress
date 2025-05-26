@@ -1,0 +1,4 @@
+rm -rf cypress/reports/*
+npx cypress run --browser chrome --reporter cypress-mochawesome-reporter
+npx mochawesome-merge cypress/reports/*.json > cypress/reports/merged.json
+npx marge cypress/reports/merged.json --reportDir cypress/reports/html

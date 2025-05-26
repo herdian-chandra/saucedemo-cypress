@@ -3,20 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "login": "npx cypress run --browser chrome --spec cypress/e2e/1-login/login.cy.js",
-    "login-pom": "npx cypress run --browser chrome --spec cypress/e2e/1-login/login-pom.cy.js",
-    "login-pom-data": "npx cypress run --browser chrome --spec cypress/e2e/1-login/login-pom-data.cy.js",
-    "test:e2e-all": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/**/*.cy.js",
-    "e2e": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-single-item.cy.js",
-    "e2e-multiple": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-multiple-item.cy.js",
-    "headed-test": "npx cypress run --headed --browser chrome"
+    "test:login": "npx cypress run --browser chrome --spec cypress/e2e/1-login/**/*.cy.js",
+    "test:e2e": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/**/*.cy.js",
+    "e2e-single": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-single-item.cy.js",
+    "e2e-multiple": "npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-multiple-item.cy.js"
   },
   "author": "Herdian Chandra",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "cypress": "^14.3.3",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
