@@ -1,7 +1,9 @@
 # saucedemo-cypress
 
+[![My Skills](https://skillicons.dev/icons?i=js,nodejs,cypress,gherkin,jenkins,githubactions&theme=light)](https://skillicons.dev)
+
 This repository contains a simple web automation project for SauceDemo, built using the Page Object Model (POM) design pattern.
-It utilizes the fixture feature to load external test data, generates test reports with Mochawesome Reporter, and integrates with Jenkins CI/CD for automated job execution.
+It utilizes the fixture feature to load external test data, generates test reports with Mochawesome Reporter, and integrates with Jenkins CI/CD and Github Actions for automated job execution.
 
 ## Prerequisites
 
@@ -21,18 +23,11 @@ To open the Cypress Test Runner and view all test cases, execute:
 npx cypress open
 ```
 
-Alternatively, you can refer to the `package.json` file to find and run specific test scripts tailored to different use cases.
-| Scripts | Script Content |
-| ------ | ------ |
-| test-all | npx cypress run --browser chrome --spec cypress/e2e/ |
-| login | npx cypress run --browser chrome --spec cypress/e2e/1-login/login.cy.js |
-| login-pom | npx cypress run --browser chrome --spec cypress/e2e/1-login/login-pom.cy.js |
-| login-pom-data | npx cypress run --browser chrome --spec cypress/e2e/1-login/login-pom-data.cy.js |
-| e2e | npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-single-item.cy.js |
-| e2e-multiple | npx cypress run --browser chrome --spec cypress/e2e/2-e2e/order-multiple-item.cy.js |
-| headed-test | npx cypress run --headed --browser chrome |
+## Important Notes!
 
-## Reports
+Currently this project has default project SpecPattern for .feature file for implementing BDD. you can check more details in **cypress/e2e/3-bdd**
+
+## Sample Reports using Mochawesome
 
 ![alt text](img/reports.png)
 
@@ -49,3 +44,13 @@ Alternatively, you can refer to the `package.json` file to find and run specific
 - Result
 
   ![alt text](img/image-2.png)
+
+## Run in Github Actions
+
+- This is a simple configuration job in github actions
+
+  ![alt text](img/main-yml.png)
+
+- Result
+
+  ![alt text](img/result-githubactions.png)
